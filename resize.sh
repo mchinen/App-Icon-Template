@@ -1,6 +1,14 @@
 #!/bin/bash
 
 INK=/usr/bin/inkscape
+MAC_INK=/Applications/Inkscape.app/Contents/Resources/bin/inkscape
+
+# change path for mac
+if [[ -f $MAC_INK ]]
+then
+    echo "using mac path $MAC_INK"
+    INK=$MAC_INK
+fi
 
 if [[ -z "$1" ]] 
 then
